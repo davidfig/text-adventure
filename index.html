@@ -12,12 +12,20 @@
         }
 
         .input {
-            height: 3rem;
             width: 100%;
+            border: 1px solid black;
         }
+
+        .input-text {
+            border: none;
+        }
+
     </style>
 </head>
 <body>
     <div class="body">hello.</div>
-    <input class="input" type="text"/>
+    <div class="input">
+        <div class="input-history"></div>
+        <input class="input-text" type="text"/>
+    </div>
 </body>
