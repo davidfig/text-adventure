@@ -1,0 +1,24 @@
+{
+  "name": "text-adventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "livereload & serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfig/text-adventure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidfig/text-adventure/issues"
+  },
+  "homepage": "https://github.com/davidfig/text-adventure#readme",
+  "dependencies": {
+    "livereload": "^0.9.3",
+    "serve": "^13.0.2"
+  }
+}

@@ -2,30 +2,38 @@
     <style>
         body {
             margin: 0.5rem;
-            display: flex;
             flex-direction: column;
             height: calc(100% - 1rem);
+            font-family: arial;
+            font-size: 1rem;
         }
 
         .body {
             flex-grow: 1;
         }
 
-        .input {
-            width: 100%;
-            border: 1px solid black;
-        }
-
-        .input-text {
+        .input, .input:focus {
+            font-family: arial;
+            font-size: 1rem;
+            outline: none;
             border: none;
+            display: block;
+            outline: none;
+            padding: 0;
         }
 
+        .player-input {
+            margin-bottom: 1rem;
+        }
+
+        .computer-input {
+            color: blue;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
-    <div class="body">hello.</div>
-    <div class="input">
-        <div class="input-history"></div>
-        <input class="input-text" type="text"/>
-    </div>
+    <div class="body"></div>
+    <input class="input" type="text"/>
+    <script type="module" src="code/main.js"></script>
 </body>
