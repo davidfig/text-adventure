@@ -1,4 +1,5 @@
 import { firstRoom } from '../dalia/firstRoom.js'
+import { firstRoom as jonathanFirstRoom } from '../jonathan/firstRoom.js'
 import { whoRoom } from './whoRoom.js'
 import { clear } from './say.js'
 
@@ -14,7 +15,7 @@ export function initRooms() {
             changeRoom(firstRoom)
         } else if (search.get('coder').toLowerCase().includes('jonathan')) {
             document.title = 'Jonathan\'s Adventure'
-            changeRoom(firstRoom)
+            changeRoom(jonathanFirstRoom)
         }
     }
 }

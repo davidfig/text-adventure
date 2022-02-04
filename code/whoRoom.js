@@ -1,5 +1,5 @@
 import { firstRoom } from '../dalia/firstRoom.js'
-import { firstRoom as jonathanFirstRoom } from '../dalia/firstRoom.js'
+import { firstRoom as jonathanFirstRoom } from '../jonathan/firstRoom.js'
 import { say } from "./say.js"
 import { changeRoom } from "./room.js"
 
