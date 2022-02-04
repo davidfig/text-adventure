@@ -4,6 +4,10 @@ function getInventory() {
     return Array.from(inventory)
 }
 
+export function hasInventory(item) {
+    return inventory.has(item)
+}
+
 export function addInventory(item) {
     inventory.add(item)
     const items = getInventory()
