@@ -1,4 +1,4 @@
-import { say } from "./say.js"
+import { say } from "../code/say.js"
 
 class FirstRoom {
     enter() {
