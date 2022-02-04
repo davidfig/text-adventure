@@ -1,13 +1,9 @@
-class State {
-    state = {}
+let state = {}
 
-    add(variable, value) {
-        this.state[variable] = value
-    }
-
-    get(variable) {
-        return this.state[variable]
-    }
+export function setState(variable, value) {
+    state[variable] = value
 }
 
-export const state = new State()
+export function getState(variable) {
+    return state[variable]
+}
