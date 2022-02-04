@@ -12,7 +12,7 @@ class FirstRoom {
             say("You went to your house")
         } else if (text.includes("shop")) {
             say("You went to your house!")
-        } else if (text.includes(bank)) {
+        } else if (text.includes("bank")) {
             say("You went to the bank")
         } else {        
             say("I did not understand that!")
