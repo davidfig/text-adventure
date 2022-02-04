@@ -2,10 +2,14 @@
     <style>
         body {
             margin: 0.5rem;
-            flex-direction: column;
-            height: calc(100% - 1rem);
             font-family: arial;
             font-size: 1rem;
+        }
+
+        .container {
+            flex-direction: column;
+            max-height: calc(100% - 1rem);
+            overflow: auto;
         }
 
         .body {
@@ -30,10 +34,57 @@
             color: blue;
             margin-bottom: 1rem;
         }
+
+        .status {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 20rem;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 1rem);
+        }
+
+        .status > div {
+            border: 1px solid black;
+            padding: 0.5rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            height: 10rem;
+        }
+
+        .inventory {
+            flex-grow: 1;
+        }
+
+        .title {
+            width: 100%;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .about-text, .inventory-text {
+            overflow: scroll;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
-    <div class="body"></div>
-    <input class="input" type="text"/>
+    <div class="container">
+        <div class="body"></div>
+        <input class="input" type="text"/>
+    </div>
+    <div class="status">
+        <div class="about">
+            <div class="title">Status</div>
+            <div class="about-text"></div>
+        </div>
+        <div class="inventory">
+            <div class="title">Inventory</div>
+            <div class="inventory-text"></div>
+        </div>
+    </div>
     <script type="module" src="code/main.js"></script>
 </body>

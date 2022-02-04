@@ -1,8 +1,14 @@
-let body
-
-window.addEventListener("load", () => body = document.querySelector('.body'))
-
+export function clear() {
+    document.querySelector('.body').innerHTML = ''
+}
 export function say(text) {
-    body.innerHTML += `<div class="computer-input">${text}</div>`
+    document.querySelector('.body').innerHTML += `<div class="computer-input">${text}</div>`
 }
 
+export function status(text) {
+    document.querySelector('.about-text').innerHTML = text
+}
+
+export function inventory(text) {
+    document.querySelector('.inventory-text').innerHTML = text
+}
