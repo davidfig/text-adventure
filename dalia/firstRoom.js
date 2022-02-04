@@ -1,10 +1,9 @@
-import { say } from "./say.js"
+import { say } from '../code/say.js'
 
 class FirstRoom {
     enter() {
         say("The woods are dark and dreary. You hear the howls of various wild animals around you. Do you look for food or a shelter?")
     }
-
 
     respond(text) {
         text = text.toLowerCase()
