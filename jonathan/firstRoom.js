@@ -3,7 +3,7 @@ import { addInventory, removeInventory } from "../code/inventory.js"
 import { changeRoom } from "../code/room.js"
 import { house } from "./house.js"
 import { shop } from "./shop.js"
-import { changeEnergy, startEnergy } from "./energy.js"
+import { startEnergy } from "./energy.js"
 
 class FirstRoom {
     hasBanana = false

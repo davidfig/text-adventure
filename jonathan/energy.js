@@ -12,3 +12,7 @@ export function changeEnergy(delta) {
     setState("energy", energy + delta)
     status(`Energy ${getState("energy")} / ${getState("energy-max")}`)
 }
+
+export function getEnergy() {
+    return getState("energy")
+}
