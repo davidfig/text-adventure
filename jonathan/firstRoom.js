@@ -3,6 +3,7 @@ import { addInventory, removeInventory } from "../code/inventory.js"
 import { changeRoom } from "../code/room.js"
 import { house } from "./house.js"
 import { shop } from "./shop.js"
+import { changeEnergy, startEnergy } from "./energy.js"
 
 class FirstRoom {
     hasBanana = false
@@ -11,6 +12,7 @@ class FirstRoom {
         say("You have gotten captured to be at a zoo. Find out how to escape by climbing trees, stealing keys and food and finnaly, breaking out of the zoo!")
         say("You can find things on the ground like money, food, and also, Poop!")
         say("the places you can go are the bank, shop, and your house")
+        startEnergy(100)
     }
 
     respond(text) {
@@ -19,7 +21,7 @@ class FirstRoom {
         } else if (text.includes("shop")) {
             changeRoom(shop)
         } else if (text.includes("bank")) {
-            say("You went to the bank!")    
+            say("You went to the bank!")
         } else if (text.includes("look")) {
             say("You see a banana on the floor!")
         } else if (text.includes("banana") && text.includes("eat")) {
@@ -37,8 +39,8 @@ class FirstRoom {
             } else {
                 say("Nothing to pick up!")
             }
-        } else {    
-            say("I did not understand that!")   
+        } else {
+            say("I did not understand that!")
         }
     }
 }
