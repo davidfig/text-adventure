@@ -1,7 +1,7 @@
 const status = {}
 
-export function addStatus(name, current, maximum) {
-    status[name] = [current, maximum]
+export function addStatus(name, current, maximum, currency) {
+    status[name] = [current, maximum, currency]
     print()
 }
 
@@ -20,11 +20,20 @@ export function changeStatus(name, delta) {
     print()
 }
 
+export function getStatus(name) {
+    return status[name][0]
+}
+
 function print() {
     let s = ''
     for (const key in status) {
         const entry = status[key]
-        s += `<div>${key} ${entry[0]} / ${entry[1]}`
+        const currency = entry[2] ? entry[2] : ''
+        if (entry[1]) {
+            s += `<div>${key}: ${entry[0]} / ${entry[1]}</div>`
+        } else {
+            s += `<div>${key}: ${currency}${entry[0]}</div>`
+        }
     }
     document.querySelector('.about-text').innerHTML = s
 }

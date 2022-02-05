@@ -3,6 +3,7 @@ import { addInventory, removeInventory } from "../code/inventory.js"
 import { changeRoom } from "../code/room.js"
 import { house } from "./house.js"
 import { shop } from "./shop.js"
+import { bank } from "./bank.js"
 import { addStatus, changeStatus } from "../code/status.js"
 
 class FirstRoom {
@@ -13,21 +14,22 @@ class FirstRoom {
         say("You can find things on the ground like money, food, and also, Poop!")
         say("the places you can go are the bank, shop, and your house")
         addStatus('Energy', 100, 100)
+        addStatus('Money', 50, undefined, '$')
+       addStatus('Bank Money', 0, undefined,  '$')
     }
-
     respond(text) {
         if (text.includes("house")) {
             changeRoom(house)
         } else if (text.includes("shop")) {
             changeRoom(shop)
         } else if (text.includes("bank")) {
-            say("You went to the bank!")
+            changeRoom(bank)
         } else if (text.includes("look")) {
             say("You see a banana on the floor!")
         } else if (text.includes("banana") && text.includes("eat")) {
             if (this.hasBanana) {
                 say("You have eaten a banana!")
-                removeInventory("banana")
+                removeInventory("Banana")
             } else {
                 say("You don't have a banana")
             }

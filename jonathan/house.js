@@ -1,5 +1,8 @@
 import { say } from "../code/say.js"
 import { addInventory } from "../code/inventory.js"
+import { changeRoom } from "../code/room.js"
+import { shop } from "./shop.js"
+import { bank } from "./bank.js"
 
 class House {
 hasBanana2 = false
@@ -9,9 +12,9 @@ hasBanana2 = false
 
     respond(text) {
         if (text.includes("shop")) {
-            say("You went to the shop!")
+            changeRoom(shop)
         } else if (text.includes("bank")) {
-            say("You went to the bank!")  
+            changeRoom(bank) 
         } else if (text.includes("look")) {
             say("You see trees and other monkeys. You also see a banana on the floor")  
         } else if (text.includes("pick up")) {
