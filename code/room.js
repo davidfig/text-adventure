@@ -25,7 +25,7 @@ export function getRoom() {
 }
 
 export function changeRoom(newRoom) {
-    clear();
+    clear()
     room = newRoom
     room.enter()
 }

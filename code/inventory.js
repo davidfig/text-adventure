@@ -8,8 +8,7 @@ export function hasInventory(item) {
     return inventory.has(item)
 }
 
-export function addInventory(item) {
-    inventory.add(item)
+function changeInventory() {
     const items = getInventory()
     let s = ''
     for (const item of items) {
@@ -18,6 +17,12 @@ export function addInventory(item) {
     document.querySelector('.inventory-text').innerHTML = s
 }
 
+export function addInventory(item) {
+    inventory.add(item)
+    changeInventory()
+}
+
 export function removeInventory(item) {
     inventory.delete(item)
+    changeInventory()
 }
