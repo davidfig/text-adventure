@@ -1,0 +1,53 @@
+{
+    "describe": [
+        "You walk into the depths of the forest. You notice a small colony of [mushrooms] growing on an old piece of rotting wood, a [squirrel] eating an [acorn] and a [bush].",
+        "In the distance you see a [road]."
+    ],
+    "nouns": {
+        "bush": {
+            "look": "The bush is covered in small [berries]"
+        },
+        "berries": {
+            "pick": "You pick the berries."
+        },
+        "road": {
+            "go": "You head down the road..."
+        },
+        "large banana": {
+            "eat": "blah blah"
+        }
+    },
+    "talk": {
+        "jonas": [
+            {
+                "npc": {
+                    "talk": "First thing jonas says"
+                }
+            },
+            {
+                "npc": {
+                    "talk": "First question?",
+                    "responses": [
+                        {
+                            "talk": "this is my first response to the first question",
+                            "npc": {
+                                "talk": "this is the response to your response from the first question here's a [large banana]"
+                            }
+                        },
+                        {
+                            "talk": "this is my second response to the first question",
+                            "npc": {
+                                "talk": "this is his response to your second response from teh first question"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "npc": {
+                    "talk": "Second Question?"
+                }
+            }
+        ]
+    }
+}

@@ -1,4 +1,5 @@
+type Noun = Record<string, { say: string, do?: () => void }>;
+
 export abstract class Room {
-    abstract enter(): void;
-    abstract respond(text: string): void;
+    abstract handle(noun: string, verb: string): void;
 }
